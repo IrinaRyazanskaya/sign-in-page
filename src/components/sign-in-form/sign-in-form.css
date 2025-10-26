@@ -1,0 +1,16 @@
+.sign-in-card {
+  box-sizing: border-box;
+  width: 440px;
+  background: #fff;
+  border-radius: 6px;
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.sign-in-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
