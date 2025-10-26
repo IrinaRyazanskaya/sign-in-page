@@ -1,0 +1,40 @@
+.input-label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 0 11px;
+  border-radius: 8px;
+  border: 1px solid #d9d9d9;
+  height: 38px;
+  box-shadow: 0 0 0 0 rgba(5, 145, 255, 0);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.input-label:focus-within {
+  border-color: #1677FF;
+  box-shadow: 0 0 0 2px rgba(5, 145, 255, 0.1);
+}
+
+.input-icon {
+  width: 16px;
+  height: 16px;
+}
+
+.input-field {
+  border: none;
+  background: transparent;
+  font-family: "SF Pro Text", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  width: 100%;
+}
+
+.input-field::placeholder {
+    color: rgba(0, 0, 0, 0.25);
+  font-family: "SF Pro Text", sans-serif;
+  font-weight: 400;
+}
+
+.input-field:focus {
+  outline: none;
+}
