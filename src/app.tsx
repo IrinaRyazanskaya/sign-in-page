@@ -1,8 +1,11 @@
+import SignInForm from "./components/sign-in-form";
+import "./app.css";
+
 function App() {
   return (
-    <>
-      Hi!
-    </>
+    <div className="app">
+      <SignInForm />
+    </div>
   );
 }
 
