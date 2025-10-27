@@ -5,11 +5,11 @@ type CompanyLogoProps = {
   name: string;
 };
 
-const CompanyLogo = ({ name }: CompanyLogoProps) => (
-  <div className="company-logo">
-    <img className="company-icon" src={companyIconSrc} alt="Blue circle" />
-    <span className="company-name">{name}</span>
-  </div>
-);
-
-export default CompanyLogo;
+export function CompanyLogo({ name }: CompanyLogoProps) {
+  return (
+    <div className="company-logo">
+      <img className="company-logo__icon" src={companyIconSrc} alt="Blue circle" />
+      <span className="company-logo__name">{name}</span>
+    </div>
+  );
+}

@@ -1,12 +1,16 @@
-import SignInForm from "./components/sign-in-form";
+import { QueryClientProvider } from "@tanstack/react-query";
+
+import { SignInForm } from "./components/sign-in-form";
+import { queryClient } from "./queries";
+
 import "./app.css";
 
-function App() {
+export function App() {
   return (
-    <div className="app">
-      <SignInForm />
-    </div>
+    <QueryClientProvider client={queryClient}>
+      <div className="app">
+        <SignInForm />
+      </div>
+    </QueryClientProvider>
   );
 }
-
-export default App;

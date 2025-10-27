@@ -1,1 +1,1 @@
-export { default } from "./sign-in-heading";
+export * from "./sign-in-heading";

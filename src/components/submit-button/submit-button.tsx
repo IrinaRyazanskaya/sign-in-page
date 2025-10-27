@@ -5,10 +5,10 @@ type SubmitButtonProps = {
   disabled?: boolean;
 };
 
-const SubmitButton = ({ label, disabled = false }: SubmitButtonProps) => (
-  <button className="submit-button" type="submit" disabled={disabled}>
-    {label}
-  </button>
-);
-
-export default SubmitButton;
+export function SubmitButton({ label, disabled = false }: SubmitButtonProps) {
+  return (
+    <button className="submit-button" type="submit" disabled={disabled}>
+      {label}
+    </button>
+  );
+}
