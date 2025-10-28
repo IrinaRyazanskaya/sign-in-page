@@ -1,27 +1,51 @@
 .submit-button {
-  cursor: not-allowed;
+  cursor: pointer;
 
-  box-sizing: border-box;
+  display: inline-flex;
+  gap: 8px;
+  align-items: center;
+  justify-content: center;
+
   width: 100%;
-  height: 40px;
+  min-height: 40px;
   padding: 0 15px;
-  border: 1px solid #d9d9d9;
+  border: 1px solid transparent;
   border-radius: 8px;
 
   font-size: 16px;
   font-weight: 400;
+  line-height: 1;
+
+  transition:
+    background-color 0.2s ease,
+    box-shadow 0.2s ease,
+    color 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.submit-button_primary {
+  color: #fff;
+  background: #1677ff;
+  box-shadow: 0 2px 0 0 rgb(5 145 255 / 10%);
+}
+
+.submit-button_primary:not(:disabled):hover {
+  background: #0065f3;
+  box-shadow: 0 2px 0 0 rgb(5 145 255 / 20%);
+}
+
+.submit-button_primary:not(:disabled):focus-visible {
+  outline: 1px solid #1677ff;
+  outline-offset: 1px;
+}
+
+.submit-button:disabled {
+  cursor: not-allowed;
+
+  border-color: #d9d9d9;
+
   color: rgb(0 0 0 / 25%);
 
   background: rgb(0 0 0 / 4%);
-}
-
-.submit-button:not(:disabled) {
-  cursor: pointer;
-  color: #fff;
-  background: #1677ff;
-  transition: background-color 0.2s ease;
-}
-
-.submit-button:not(:disabled):hover {
-  background: #1d4ed8;
+  box-shadow: none;
 }

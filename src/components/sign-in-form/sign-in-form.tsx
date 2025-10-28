@@ -99,9 +99,11 @@ export function SignInForm() {
               minLength={6}
             />
             <SubmitButton
-              label={signInMutation.isPending ? "Logging in..." : "Log in"}
+              type="submit"
               disabled={!isFormValid || signInMutation.isPending}
-            />
+            >
+              {signInMutation.isPending ? "Logging in..." : "Log in"}
+            </SubmitButton>
             {errorMessage && (
               <p className="sign-in-form__error">
                 {errorMessage}
