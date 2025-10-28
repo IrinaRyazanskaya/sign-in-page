@@ -1,0 +1,11 @@
+.error-message {
+  align-self: flex-start;
+
+  max-width: 100%;
+  margin: 0;
+
+  font-size: 14px;
+  font-weight: 400;
+  color: #ff4d4f;
+  text-align: left;
+}
