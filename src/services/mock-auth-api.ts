@@ -42,31 +42,51 @@ export const signIn = async ({ email, password }: SignInPayload): Promise<SignIn
       const normalizedEmail = email.trim().toLowerCase();
 
       if (normalizedEmail.includes("network")) {
-        reject(new SignInApiError("Не удалось установить соединение. Проверьте сеть.", "NETWORK_ERROR", 0));
+        reject(
+          new SignInApiError(
+            "Failed to establish a connection. Please check your network.",
+            "NETWORK_ERROR",
+            0,
+          ),
+        );
         return;
       }
 
       if (normalizedEmail.includes("server")) {
-        reject(new SignInApiError("На сервере произошла ошибка. Попробуйте позже.", "SERVER_ERROR", 500));
+        reject(
+          new SignInApiError(
+            "A server error occurred. Please try again later.",
+            "SERVER_ERROR",
+            500,
+          ),
+        );
         return;
       }
 
       if (normalizedEmail.includes("locked")) {
         reject(
-          new SignInApiError("Аккаунт заблокирован. Свяжитесь с поддержкой.", "ACCOUNT_LOCKED", 423),
+          new SignInApiError(
+            "The account has been blocked. Please contact support.",
+            "ACCOUNT_LOCKED",
+            423,
+          ),
         );
         return;
       }
 
       if (normalizedEmail.includes("attempt")) {
         reject(
-          new SignInApiError("Превышено количество попыток входа. Повторите позже.", "TOO_MANY_ATTEMPTS", 429),
+          new SignInApiError(
+            "The number of login attempts has been exceeded. Please try again later.",
+            "TOO_MANY_ATTEMPTS",
+            429,
+          ),
         );
         return;
       }
 
       if (normalizedEmail !== MOCK_USER.email || password !== MOCK_USER.password) {
-        reject(new SignInApiError("Неверный email или пароль.", "INVALID_CREDENTIALS", 401));
+        reject(new SignInApiError("Invalid email or password.", "INVALID_CREDENTIALS", 401));
         return;
       }
 

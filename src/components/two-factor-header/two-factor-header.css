@@ -1,4 +1,4 @@
-.two-factor__header {
+.two-factor-header {
   position: relative;
 
   display: flex;
@@ -8,7 +8,7 @@
   min-height: 44px;
 }
 
-.two-factor__back {
+.two-factor-header__back {
   cursor: pointer;
 
   position: absolute;

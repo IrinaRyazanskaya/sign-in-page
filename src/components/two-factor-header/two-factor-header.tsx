@@ -10,15 +10,15 @@ type TwoFactorHeaderProps = {
 
 export function TwoFactorHeader({ logo, onBack }: TwoFactorHeaderProps) {
   return (
-    <div className="two-factor__header">
+    <div className="two-factor-header">
       <button
         type="button"
-        className="two-factor__back"
+        className="two-factor-header__back"
         onClick={onBack}
         aria-label="Back to sign-in form"
       >
         <img
-          className="button-icon"
+          className="two-factor-header__button-icon"
           src={arrowIcon}
           alt="Back arrow"
         />
