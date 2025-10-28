@@ -1,0 +1,38 @@
+.code-inputs {
+  display: flex;
+  gap: 13px;
+  justify-content: center;
+}
+
+.code-inputs__digit {
+  box-sizing: border-box;
+  width: 52px;
+  height: 60px;
+  border: 1px solid #d9d9d9;
+  border-radius: 8px;
+
+  font-size: 24px;
+  font-weight: 600;
+  color: rgb(0 0 0 / 88%);
+  text-align: center;
+
+  outline: none;
+
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.code-inputs__digit:focus-visible {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgb(37 99 235 / 20%);
+}
+
+.code-inputs__digit_error {
+  border-color: #ff4d4f;
+}
+
+.code-inputs__digit_error:focus-visible {
+  border-color: #ff4d4f;
+  box-shadow: 0 0 0 3px rgb(239 68 68 / 20%);
+}
