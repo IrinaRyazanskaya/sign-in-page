@@ -1,0 +1,15 @@
+.two-factor-heading__title {
+  margin: 0;
+
+  font-size: 24px;
+  font-weight: 600;
+  color: rgb(0 0 0 / 88%);
+  text-align: center;
+}
+
+.two-factor-heading__subtitle {
+  margin: 0;
+  font-size: 16px;
+  color: rgb(0 0 0 / 88%);
+  text-align: center;
+}
