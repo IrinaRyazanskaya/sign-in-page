@@ -1,0 +1,28 @@
+.two-factor {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  align-items: stretch;
+  align-self: center;
+
+  width: fit-content;
+  max-width: 100%;
+}
+
+.two-factor__body {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 100%;
+}
+
+.two-factor__inputs-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  align-items: center;
+  align-self: center;
+
+  width: fit-content;
+  max-width: 100%;
+}
