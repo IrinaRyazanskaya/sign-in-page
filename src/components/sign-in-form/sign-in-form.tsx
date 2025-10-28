@@ -8,6 +8,7 @@ import {
   type SignInSuccess,
 } from "../../services/mock-auth-api";
 import { CompanyLogo } from "../company-logo";
+import { ErrorMessage } from "../error-message";
 import { InputField } from "../input-field";
 import { SubmitButton } from "../submit-button";
 import { SignInHeading } from "../sign-in-heading";
@@ -104,11 +105,7 @@ export function SignInForm() {
             >
               {signInMutation.isPending ? "Logging in..." : "Log in"}
             </SubmitButton>
-            {errorMessage && (
-              <p className="sign-in-form__error">
-                {errorMessage}
-              </p>
-            )}
+            {errorMessage && <ErrorMessage message={errorMessage} />}
           </form>
         </>
       ) : (
