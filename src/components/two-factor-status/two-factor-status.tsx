@@ -1,3 +1,5 @@
+import { useEffect, useState } from "react";
+
 import { SubmitButton } from "../submit-button";
 
 import "./two-factor-status.css";
@@ -17,11 +19,28 @@ export function TwoFactorStatus({
   isExpired,
   onRequestNewCode,
 }: TwoFactorStatusProps) {
+  const [isSuccess, setIsSuccess] = useState(false);
+
+  useEffect(() => {
+    if (!isCodeComplete || !isCodeValid) {
+      setIsSuccess(false);
+    }
+  }, [isCodeComplete, isCodeValid]);
+
+  const handleContinue = () => {
+    setIsSuccess(true);
+  };
+
   return (
     <div className="two-factor__status">
       {isCodeComplete ? (
-        <SubmitButton type="button" disabled={!isCodeValid}>
-          Continue
+        <SubmitButton
+          type="button"
+          disabled={!isCodeValid}
+          variant={isSuccess ? "success" : "primary"}
+          onClick={handleContinue}
+        >
+          {isSuccess ? "Success" : "Continue"}
         </SubmitButton>
       ) : isExpired ? (
         <SubmitButton type="button" onClick={onRequestNewCode}>

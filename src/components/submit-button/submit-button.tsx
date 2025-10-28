@@ -2,7 +2,7 @@ import { type ButtonHTMLAttributes, type ReactNode } from "react";
 
 import "./submit-button.css";
 
-type SubmitButtonVariant = "primary";
+type SubmitButtonVariant = "primary" | "success";
 
 type SubmitButtonProps = {
   children: ReactNode;

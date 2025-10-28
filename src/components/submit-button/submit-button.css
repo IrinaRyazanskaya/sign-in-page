@@ -39,6 +39,22 @@
   outline-offset: 1px;
 }
 
+.submit-button_success {
+  color: #fff;
+  background: #52c41a;
+  box-shadow: 0 2px 0 0 rgb(82 196 26 / 20%);
+}
+
+.submit-button_success:not(:disabled):hover {
+  background: #3cb011;
+  box-shadow: 0 2px 0 0 rgb(82 196 26 / 30%);
+}
+
+.submit-button_success:not(:disabled):focus-visible {
+  outline: 1px solid #52c41a;
+  outline-offset: 1px;
+}
+
 .submit-button:disabled {
   cursor: not-allowed;
 
